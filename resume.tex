@@ -1,0 +1,77 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[margin=0.25in]{geometry}
+\usepackage{enumitem}
+\usepackage{tasks}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\definecolor{linkcolor}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolor}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\begin{document}
+\pagestyle{empty}%non numbered pages
+
+%title
+	\par{\centering
+		{\huge Gabe Venberg
+	}\bigskip\par}
+\hrule
+%sections
+%contact info
+\section*{Contact Info}
+	\begin{tabular}{rl}
+	\textsc{Address:} & 2029 S Oak St, Fergus Falls, MN 56537\\
+	\textsc{Phone:} & (218)-517-0917\\
+	\textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}\\
+	\end{tabular}
+\section*{Awards and Achievements}
+	\begin{tasks}[style=itemize](2)
+	\task Communications Officer for ATCC Student Council
+	\task LeadMN Platform Committee Representative
+	\task Dean's List student for 2 semesters
+	\task Skills USA State Competition 2018 Related\\Technical Math bronze award recipient
+	\end{tasks}
+\section*{Education}
+	\begin{tabular}{R{2cm}|p{14cm}}
+	\textsl{Graduating}\\
+	\textsl{May 2019} & AAS in Mechanical Drafting, Design, \& Engineering Technology\\
+	&\textsc{gpa} in field 3.89\\
+	&\textsl{Subjects Studied} \begin{itemize}[noitemsep]
+	\item Drafting and detailing
+	\item AutoCAD and AutoDesk Inventor
+	\item Mathematics up to Calc I
+	\end{itemize}
+	\end{tabular}
+\section*{Work Experience}
+	\begin{tabular}{R{2cm}|p{14cm}}
+	\textsl{May 2018}   & \textsc{Aura Fabricators}\\
+	\textsl{July 2018}  & \emph {Drafting Intern}\\
+	&\footnotesize{Used AutoCAD and Autodesk Advanced Steel to create shop and installation drawings of steel railings and bridge components.}\\
+	\multicolumn{2}{c}{}\\
+	\textsl{May 2017}	  & \textsc{Menards}\\
+	\textsl{August 2017}  & \emph{Carry Out}\\
+	&\footnotesize{Maintained an adequate number of carts available for customers and aided customers with heavy loads}\\
+	\multicolumn{2}{c}{}\\
+	\textsl{April 2014}   & \textsc{Fleet Farm}\\
+	\textsl{August 2014}  & \emph {Maintenance Associate}\\
+	&\footnotesize{Maintained an adequate number of carts available for customers and aided customers with heavy loads}\\
+	\end{tabular}
+\section*{Other Experience}
+	\begin{tabular}{R{2cm}|p{14cm}}
+	\textsl{2013} & FIRST Robotics team 3293 member\\
+	\textsl{2016} & \footnotesize{Participated in the design, assembly, maintenance, and operation of four competitive robots in a team environment.}\\
+	\multicolumn{2}{c}{}\\
+	\textsl{2002} & Cross-Cultural Experience\\
+	\textsl{2012} &\footnotesize{Growing up in an international setting (Chad, Africa) has served to provide me with a diverse life experience rich in cross-cultural exposure.}\\
+	\end{tabular}
+\section*{Personal Hobbies and Achievements}
+	\begin{itemize}
+	\item Built my own computer, giving me valuable experience with their inner workings.
+	\item Use an advanced Linux OS on a daily basis, giving me experience with the use and maintenance of UNIX-based systems.
+	\item Use a Linux command line on a daily basis, making me comfortable in situations where a graphical user interface may not be available.
+	\item Enjoy learning; Particularly interested in space exploration and open-source technology.
+	\end{itemize}
+{\let\thefootnote\relax\footnotetext{Will provide references at interview or on request.}} 
+\end{document}
