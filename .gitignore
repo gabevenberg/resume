@@ -2,3 +2,9 @@
 *.log
 *.out
 *.pdf
+*.4*
+*.dvi
+*.tmp
+*.xref
+*.lg
+*.idv
