@@ -2,6 +2,7 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{enumitem}
+\usepackage{multicol}
 \usepackage{tasks}
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -10,9 +11,10 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolor}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
+\renewcommand{\familydefault}{cmss}
+
 \begin{document}
 \pagestyle{empty}%non numbered pages
-
 %title
 	\par{\centering
 		{\huge Gabe Venberg
@@ -20,35 +22,71 @@
 \hrule
 \section*{Contact Info}
 	\begin{tabular}{rl}
-	%\textsc{Address:} & 528 S Oak St, Fergus Falls, MN 56537\\
+	%\textsc{Address:} & 202 6 Ave N Appt 327 Fargo ND 58102\\
 	\textsc{Phone:} & (218) 517-0917\\
 	\textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}\\
-	%\textsc{Website:} & \href{gabevenberg.com}{gabevenberg.com}\\
+	\textsc{GitHub:} & \href{https://github.com/Gabe-Venberg}{github.com/Gabe-Venberg}\\
+	%\textsc{Website:} & \href{gabevenberg.com/work}{gabevenberg.com/work}\\
+	\end{tabular}
+\section*{Education}
+	\begin{tabular}{R{2cm}|p{14cm}}
+	\textsl{Aug 2020} & Bachelors in Computer Science at NDSU, with minor in Mathematics\\
+	\textsl{est. May 2023} & \textsl{Subjects Studied}
+	\begin{itemize}[noitemsep]
+		\item Java
+		\item Algorithms and Data Structures
+		\item Linear Algebra
+	\end{itemize}\\
+	\multicolumn{2}{c}{}\\
+	%get rid of partial degree, say degree is in general studies.
+	\textsl{Aug 2016} & AA in Liberal Arts and Sciences from Alexandria Technical and Community College\\
+	\textsl{May 2020} & \textsc{gpa} 3.3\\
+	&\textsl{Subjects Studied}
+	\begin{itemize}[noitemsep]
+		\item Mathematics up to Calc I
+		\item Technical and Creative writing
+		\item Drafting and detailing
+		\item AutoCAD and AutoDesk Inventor
+	\end{itemize}
 	\end{tabular}
 \section*{Work Experience}
 	\begin{tabular}{R{2cm}|p{14cm}}
-	\textsl{May 2019} & \textsc{Integrated Networking}\\
-	\textsl{current} & \emph{Tier 1 Tech}\\
+	\textsl{Sep 2020}	& \textsc{NDSU Precision Agriculture Center}\\
+	\textsl{current}	& \emph{Junior Developer}\\
+	& Developing methods of preprocessing LIDAR data with python for predicting crop yield using machine learning.\\
+	\multicolumn{2}{c}{}\\
+	\textsl{May 2019}	& \textsc{Integrated Networking}\\
+	\textsl{Aug 2020}	& \emph{Tier 1 and 2 Tech}\\
 	& Performed troubleshooting, repairs, and upgrades on customer computers, performed network setup, and estimated customer solutions.
 	Also participated in a variety of more complex 'one off' projects for clients with specific needs.\\
 	\multicolumn{2}{c}{}\\
 	\textsl{Sep 2018}	& \textsc{Alexandria High School}\\
 	\textsl{Feb 2019}	& \emph{Information Technology Specialist}\\
 	& Used Google Admin, Destiny, and a variety of other tools to maintain and upgrade the technology infrastructure of the organization\\
-		%\multicolumn{2}{c}{}\\
-		%\textsl{May 2018}   & \textsc{Aura Fabricators}\\
-		%\textsl{July 2018}  & \emph{Drafting Intern}\\
-		%&Used AutoCAD and Autodesk Advanced Steel to create shop and installation drawings of steel railings and bridge components.\\
+	\multicolumn{2}{c}{}\\
+	\textsl{May 2018}   & \textsc{Aura Fabricators}\\
+	\textsl{July 2018}  & \emph{Drafting Intern}\\
+	&Used AutoCAD and Autodesk Advanced Steel to create shop and installation drawings of steel railings and bridge components.\\
 	\end{tabular}
-\section*{Personal Experience}
+\newpage
+\section*{Technology Skills}
+	\begin{multicols}{2}
 	\begin{itemize}
-	\item Built several personal computers, giving me valuable experience with physical maintenance.
-	\item Use a Linux OS on a daily basis, giving me experience with the use and maintenance of UNIX-based systems.
-	\item Use the Linux command line (ZSH) as my primary interface, making me comfortable in situations where a graphical user interface may not be available.
-	\item Run a small webserver on a Raspberry Pi, including a Nextcloud instance, giving me some experience in web administration and management.
-		%\item Run a small homelab hosting Gittea, Nextcloud, and a static NGINX website, giving me some experience with network administation.
-		%\item Experience with ansible, SSH key management, NGINX reverse proxies, pf sense, openwrt, promox, lxd contianers, and docker.
+	\item Java
+	\item Python
+	\item Scientific data processing
+	\item Linux BASH scripting.
+	\item Linux/UNIX command line and GUI use
+	\item Linux/UNIX administration
+	\item Basic network administration
+	\item NGINX reverse proxies
+	\item SSH remote management
+	\item Proxmox VM management
+	\item Physical computer maintenance and repair
+	\item[\vspace{\fill}]
+		%\item Experience with ansible, pf sense, openwrt, and docker.
 	\end{itemize}
+	\end{multicols}
 \section*{Other Experience}
 	\begin{tabular}{R{2cm}|p{14cm}}
 	\textsl{2018} & Student representative for Minnesota State College Association Technology Council\\
@@ -63,20 +101,4 @@
 	\textsl{2002} & Cross-Cultural Experience\\
 	\textsl{2012} &Growing up in an international setting (Chad, Africa) has served to provide me with a diverse life experience rich in cross-cultural exposure.\\
 	\end{tabular}
-\section*{Education}
-	\begin{tabular}{R{2cm}|p{14cm}}
-	\textsl{Aug 2016} & AA from Alexandria Technical and Community College\\
-	\textsl{May 2020} & \textsc{gpa} 3.3\\
-	&\textsl{Subjects Studied}
-	\begin{itemize}[noitemsep]
-		%\item Drafting and detailing
-		%\item AutoCAD and AutoDesk Inventor
-		\item Mathematics up to Calc I
-		\item Technical and Creative writing
-	\end{itemize}\\
-	\multicolumn{2}{c}{}\\
-	\textsl{Start Aug 2020} & Bachelors in Computer Science at NDSU\\
-	& Will be studying Computer Science at North Dakota State University starting in August 2020
-	\end{tabular}
-{\let\thefootnote\relax\footnotetext{Will provide references at interview or on request.}} 
 \end{document}
