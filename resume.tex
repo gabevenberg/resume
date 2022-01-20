@@ -11,8 +11,6 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolor}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
-\renewcommand{\familydefault}{cmss}
-
 \begin{document}
 \pagestyle{empty}%non numbered pages
 \section*{Gabe Venberg}
@@ -57,6 +55,7 @@
 	\textsl{est. May 2023} & \textsl{Subjects Studied}
 	\begin{itemize}[noitemsep]
 		\item Java
+		\item Rust
 		\item C\#
 		\item Agile software dev
 		\item Databases
@@ -78,25 +77,23 @@
 	\end{tabular}
 \newpage
 \section*{Technology Skills}
-	\begin{multicols}{2}
-	\begin{itemize}
-	\item Java
-	\item Python
-	\item Scientific data processing
-	\item Linux BASH scripting.
-	\item Linux/UNIX command line and GUI use
-	\item Linux/UNIX administration
-	\item Basic network administration
-	\item NGINX reverse proxies
-	\item NGINX and apache experience
-	\item SSH remote management
-	\item Proxmox VM management
-	\item Physical computer maintenance and repair
-	\item \LaTeX document writing.
-	\item[\vspace{\fill}]
-		%\item Experience with ansible, pf sense, openwrt, and docker.
-	\end{itemize}
-	\end{multicols}
+	\begin{tasks}[style=itemize](3)
+	\task Java
+	\task Python
+	\task Rust
+	\task Scientific data processing
+	\task Web Scraping
+	\task Linux BASH scripting.
+	\task Linux/UNIX command line use
+	\task Linux/UNIX administration
+	\task Basic network administration
+	\task NGINX reverse proxies
+	\task NGINX and Apache experience
+	\task SSH remote management
+	\task Proxmox VM management
+	\task Computer maintenance and repair
+	\task \LaTeX document writing.
+	\end{tasks}
 \section*{Other Experience}
 	\begin{tabular}{R{2cm}|p{14cm}}
 	\textsl{current} & Home networking lab\\
