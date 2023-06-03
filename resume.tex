@@ -1,15 +1,30 @@
 \documentclass[letterpaper,10pt]{article}
-
-\usepackage[margin=1cm]{geometry}
+\usepackage[margin=2cm]{geometry}
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{tasks}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{tabularx}
+\usepackage{array}
+% adds newline after paragraph, removes indent
+\usepackage[skip=10pt plus1pt]{parskip}
 \definecolor{linkcolor}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolor}
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% right aligned column
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\experience}[4]{
+	\begin{tabularx}{\textwidth}{X R}
+		\textbf{#1}\\
+		\textsc{#2} & #3 \\
+		\hline
+		\multicolumn{2}{p{\textwidth}}{#4}
+	\end{tabularx}
+}
 
 \begin{document}
 \pagestyle{empty}%non numbered pages
@@ -17,104 +32,94 @@
 	\begin{tabular}{rl}
 	%\textsc{Address:} & 1007 7th ave N Fargo ND 58102\\
 	\textsc{Phone:} & (218) 517-0917\\
-	\textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}\\
 	\textsc{GitHub:} & \href{https://github.com/Gabe-Venberg}{github.com/Gabe-Venberg}\\
+	\textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}\\
 	\textsc{Personal Git server:} & \href{https://git.venberg.xyz/Gabe}{git.venberg.xyz/Gabe}\\
 	%\textsc{Website:} & \href{gabevenberg.com}{gabevenberg.com}\\
 	\end{tabular}
 \section*{Work Experience}
-	\begin{tabular}{R{2cm}|p{14cm}}
-	\textsl{Aug 2022}	&\textsc{CorVent Medical}\\
-	\textsl{May 2022}	&\emph{Software Engineering Intern}\\
-	& Performed requirements analysis, wrote and performed software and hardware test procedures, and analyzed test coverage to enable regulatory approval of new medical device.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{Oct 2021}	& \textsc{Bytespeed}\\
-	\textsl{Jun 2021}	& \emph{Computer Technician}\\
-	& Performed troubleshooting and repair on RMA computers, as well as helping customers over email, phone, and instant messaging.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{Sep 2020}	& \textsc{NDSU Precision Agriculture Center}\\
-	\textsl{May 2021}	& \emph{Junior Developer}\\
-	& Developing methods of preprocessing LIDAR data with python for predicting crop yield using machine learning.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{May 2019}	& \textsc{Integrated Networking}\\
-	\textsl{Aug 2020}	& \emph{Tier 1 and 2 Tech}\\
-	& Performed troubleshooting, repairs, and upgrades on customer computers, performed network setup, and estimated customer solutions.
-	Also participated in a variety of more complex 'one off' projects for clients with specific needs.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{Sep 2018}	& \textsc{Alexandria High School}\\
-	\textsl{Feb 2019}	& \emph{Information Technology Specialist}\\
-	& Used Google Admin, Destiny, and a variety of other tools to maintain and upgrade the technology infrastructure of the organization.\\
-	\end{tabular}
+	\experience
+		{Appareo Systems}
+		{Embedded Systems Intern}
+		{Summer 2023}
+		{Implemented and ran functional testing on embedded linux product, including designing test fixtures using Raspberry Pis to automate testing of electrical properties and RF connectivity}
+
+	\experience
+		{Corvent Medical}
+		{Software Engineering Intern}
+		{Summer 2022}
+		{Performed requirements analysis, wrote and performed software and hardware test procedures, and analyzed test coverage to enable regulatory approval of new medical device.}
+
+	\experience
+		{ByteSpeed}
+		{Computer Technician}
+		{Summer 2021}
+		{Performed troubleshooting and repair on RMA computers, as well as helping customers over email, phone, and instant messaging.}
+
+	\experience
+		{NDSU Precision Agriculture Center}
+		{Junior Developer}
+		{2020--2021}
+		{Implemented methods of preprocessing LIDAR data with python for predicting crop yield using machine learning}
+
+	\experience
+		{Integrating Networking}
+		{Tier 1 and 2 Tech}
+		{2019--2020}
+		{Performed troubleshooting, repairs, and upgrades on customer computers, performed network setup, and estimated customer solutions.
+		Also implemented a variety of more complex 'one off' projects for clients with specific needs.}
+
 \section*{Education}
-	\begin{tabular}{R{2cm}|p{14cm}}
-	\textsl{Aug 2020} & Bachelors in Computer Science at NDSU, with minor in Mathematics\\
-	\textsl{est. May 2023} & \textsl{Subjects Studied}
-	\begin{itemize}[noitemsep]
-		\item Java
-		\item Rust
-		\item C\#
-		\item Agile software dev
-		\item Database Programming and Administration
-		\item Algorithms and Data Structures
-		\item Linear Algebra, Calculus and Statistics
-		\item Python
-		\item Software Engineering
-	\end{itemize}\\
-	\multicolumn{2}{c}{}\\
-	%get rid of partial degree, say degree is in general studies.
-	\textsl{Aug 2016} & AA in Liberal Arts and Sciences from Alexandria Technical and Community College\\
-	\textsl{May 2020} & \textsc{gpa} 3.3\\
-	&\textsl{Subjects Studied}
-	\begin{itemize}[noitemsep]
-		\item Technical and Creative writing
-		\item AutoCAD and AutoDesk Inventor
-	\end{itemize}
-	\end{tabular}
-\newpage
+	\experience
+		{NDSU}
+		{BS in Computer Science}
+		{Graduated 2023}
+		{}
+
+	\experience
+		{Alexandria Community College}
+		{General Ed Associates Degree}
+		{Graduated 2020}
+		{}
+
 \section*{Technology Skills}
 	\begin{tasks}[style=itemize](3)
 	\task Java
 	\task Python
 	\task Rust
-	\task Scientific data processing
+	\task Git version control system.
 	\task Web Scraping
-	\task Linux BASH scripting.
-	\task Linux/UNIX command line use
-	\task Linux/UNIX administration
-	\task Basic network administration
-	\task NGINX reverse proxies
-	\task NGINX and Apache experience
+	\task Linux Bash scripting.
+	\task Linux administration
+	\task Embedded Linux
+	\task Network administration
+	\task NGINX and Apache webservers
 	\task SSH remote management
 	\task Proxmox VM management
-	\task Computer maintenance and repair
-	\task \LaTeX document markup language.
-	\task Git version control system.
+	\task Computer repair
+	\task \LaTeX document markup language
 	\end{tasks}
 \section*{Other Experience}
-	\begin{tabular}{R{2cm}|p{14cm}}
-	\textsl{current} & Home networking lab\\
-	\textsl{2019} & Run a home network consisting of 2 physical servers and 6 Virtual machines doing a variety of tasks, such as a DNS, an NGINX reverse proxy, and several webservers serving static and dynamic content. Currently running: Nextcloud, GitTea, PiHole, Octoprint, and a static website.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{2021} & Competed in National Cyber League\\
-	& Competed for NDSU in the National Cyber League, where I placed in the top 200 teams out of 4000 total teams.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{2019} & Student representative for Minnesota State College Association Technology Council\\
-	\textsl{2018} & Represent the student bodies of two year colleges in the Minnesota State Technology council in deciding on technology related policy and procedures.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{2019} & LeadMN Platform Committee representative for west central region\\
-	\textsl{2017} & Represented ATCC, St.\ Cloud Tech, and Ridgewater Tech for LeadMN by serving on the committee in charge of LeadMN's platform document.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{2019} & ATCC Student Senator\\
-	\textsl{2017} & Represented the ATCC student body in issues ranging from student activites to establishing a student food shelf and Open Educational Resources.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{2016} & FIRST Robotics team 3293 member\\
-	\textsl{2013} & Participated in the design, assembly, maintenance, and operation of four competitive robots in a team environment.\\
-	\multicolumn{2}{c}{}\\
-	\textsl{2012} & Cross-Cultural Experience\\
-	\textsl{2002} &Growing up in an international setting (Chad, Africa) has served to provide me with a diverse life experience rich in cross-cultural exposure.\\
-	\end{tabular}
+
+	\experience
+		{Homelab}
+		{Home Linux Lab}
+		{2019--present}
+		{Run a home network consisting of 2 physical servers and 6 Virtual machines doing a variety of tasks, such as a DNS, an NGINX reverse proxy, and several webservers serving static and dynamic content. Currently running: Nextcloud, GitTea, PiHole, Octoprint, and a static website.}
 	
-	\newpage
+	\experience
+		{Open Source Development}
+		{Contributor to various open source projects}
+		{2022--current}
+		{Have contributed patches of a variety of sizes to open source projects including Python and Kata Containers}
+
+	\experience
+		{National Cyber League}
+		{Competed in National Cyber League four times.}
+		{2021, 22, and 23}
+		{Competed for NDSU in the National Cyber League, placing in the top 500 individuals nationwide for three competitions.}
+
+\newpage
 \section*{keywords}
 	{\small
 	If you, a human, are reading this, you dont have to. This is just a list of keywords that the automated filters always want, but are either just alternate wordings of things already on the resume, are in places of the resume that I have found parsers have trouble with, or are trivial (like office experience). All keywords \emph{are} applicable to me.
