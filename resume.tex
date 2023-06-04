@@ -1,7 +1,5 @@
 \documentclass[letterpaper,10pt]{article}
 \usepackage[margin=2cm]{geometry}
-\usepackage{enumitem}
-\usepackage{multicol}
 \usepackage{tasks}
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -18,8 +16,8 @@
 
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\experience}[4]{
-	\begin{tabularx}{\textwidth}{X R}
-		\textbf{#1}\\
+	\begin{tabularx}{\textwidth}{L R}
+		\multicolumn{2}{p{\textwidth}}{\textbf{#1}}\\
 		\textsc{#2} & #3 \\
 		\hline
 		\multicolumn{2}{p{\textwidth}}{#4}
@@ -29,10 +27,10 @@
 \begin{document}
 \pagestyle{empty}%non numbered pages
 \section*{Gabe Venberg}
-	\begin{tabular}{rl}
-	%\textsc{Address:} & 1007 7th ave N Fargo ND 58102\\
+	\begin{tabular}{r l}
+	%\textsc{Address:} & 1005 7th Ave N Fargo ND 58102\\
 	\textsc{Phone:} & (218) 517-0917\\
-	\textsc{GitHub:} & \href{https://github.com/Gabe-Venberg}{github.com/Gabe-Venberg}\\
+	\textsc{GitHub:} & \href{https://github.com/gabevenberg}{github.com/gabevenberg}\\
 	\textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}\\
 	\textsc{Personal Git server:} & \href{https://git.venberg.xyz/Gabe}{git.venberg.xyz/Gabe}\\
 	%\textsc{Website:} & \href{gabevenberg.com}{gabevenberg.com}\\
@@ -42,7 +40,13 @@
 		{Appareo Systems}
 		{Embedded Systems Intern}
 		{Summer 2023}
-		{Implemented and ran functional testing on embedded linux product, including designing test fixtures using Raspberry Pis to automate testing of electrical properties and RF connectivity}
+		{Implemented and ran functional testing on embedded Linux product, including designing test fixtures using Raspberry Pis to automate testing of electrical properties and RF connectivity}
+
+	\experience
+		{Kata Containers}
+		{Capstone Student}
+		{Spring Semester 2023}
+		{Implemented a Rust-based log parser for the Kata Containers project, including writing unit tests, using the GitHub workflow, and collaborating remotely across timezones.}
 
 	\experience
 		{Corvent Medical}
@@ -60,7 +64,7 @@
 		{NDSU Precision Agriculture Center}
 		{Junior Developer}
 		{2020--2021}
-		{Implemented methods of preprocessing LIDAR data with python for predicting crop yield using machine learning}
+		{Implemented methods of preprocessing LIDAR data with python for predicting crop yield using machine learning.}
 
 	\experience
 		{Integrating Networking}
@@ -71,41 +75,44 @@
 
 \section*{Education}
 	\experience
-		{NDSU}
+		{NDSU---Fargo, North Dakota}
 		{BS in Computer Science}
 		{Graduated 2023}
 		{}
 
 	\experience
-		{Alexandria Community College}
+		{Alexandria Community College---Alexandria, Minnesota}
 		{General Ed Associates Degree}
 		{Graduated 2020}
 		{}
 
+\begin{minipage}{\linewidth}
 \section*{Technology Skills}
 	\begin{tasks}[style=itemize](3)
-	\task Java
-	\task Python
 	\task Rust
+	\task Python
+	\task Java
+	\task Bash
 	\task Git version control system.
 	\task Web Scraping
-	\task Linux Bash scripting.
 	\task Linux administration
 	\task Embedded Linux
 	\task Network administration
-	\task NGINX and Apache webservers
+	\task NGINX and Apache web servers
 	\task SSH remote management
-	\task Proxmox VM management
+	\task VM management
 	\task Computer repair
 	\task \LaTeX document markup language
+	\task Googling
 	\end{tasks}
-\section*{Other Experience}
+\end{minipage}
 
+\section*{Other Experience}
 	\experience
 		{Homelab}
 		{Home Linux Lab}
 		{2019--present}
-		{Run a home network consisting of 2 physical servers and 6 Virtual machines doing a variety of tasks, such as a DNS, an NGINX reverse proxy, and several webservers serving static and dynamic content. Currently running: Nextcloud, GitTea, PiHole, Octoprint, and a static website.}
+		{Run a home network consisting of 2 physical servers and 6 Virtual machines doing a variety of tasks, such as a DNS, an NGINX reverse proxy, and several web servers serving static and dynamic content. Currently running: Nextcloud, GitTea, PiHole, Octoprint, and a static website.}
 	
 	\experience
 		{Open Source Development}
@@ -122,7 +129,7 @@
 \newpage
 \section*{keywords}
 	{\small
-	If you, a human, are reading this, you dont have to. This is just a list of keywords that the automated filters always want, but are either just alternate wordings of things already on the resume, are in places of the resume that I have found parsers have trouble with, or are trivial (like office experience). All keywords \emph{are} applicable to me.
+	If you, a human, are reading this, you don't have to. This is just a list of keywords that the automated filters always want, but are either just alternate wordings of things already on the resume, are in places of the resume that I have found parsers have trouble with, or are trivial (like office experience). All keywords \emph{are} applicable to me.
 	\tiny
 	\begin{tasks}[style=itemize](5)
 			\task Java
@@ -133,11 +140,12 @@
 			\task Linux BASH scripting.
 			\task Linux / UNIX command line
 			\task Linux / UNIX administration
-			\task network administration
+			\task Network Administration
 			\task NGINX reverse proxies
 			\task NGINX and Apache experience
 			\task SSH remote management
-			\task Proxmox VM management
+			\task Proxmox
+			\task Virtual Machine
 			\task Computer maintenance and repair
 			\task LaTeX document markup language.
 			\task Microsoft Word
@@ -151,7 +159,7 @@
 			\task Software Testing
 			\task Backup
 			\task VPN
-			\task Phising
+			\task Phishing
 			\task Collaboration
 			\task Spreadsheet
 			\task git
