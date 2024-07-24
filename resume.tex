@@ -1,13 +1,17 @@
 \documentclass[letterpaper,10pt]{article}
 \usepackage[margin=2cm]{geometry}
 \usepackage{tasks}
-\usepackage{xcolor}
+\usepackage[svgnames]{xcolor}
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{array}
 % adds newline after paragraph, removes indent
 \usepackage[skip=10pt plus1pt]{parskip}
-\definecolor{linkcolor}{rgb}{0,0.2,0.6}
+\colorlet{linkcolor}{SteelBlue}
+% \colorlet{companycolor}{DarkRed}
+% \colorlet{positioncolor}{DarkGreen}
+\colorlet{companycolor}{Black}
+\colorlet{positioncolor}{Black}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolor}
 
 % right aligned column
@@ -17,8 +21,8 @@
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\experience}[4]{
     \begin{tabularx}{\textwidth}{L R}
-        \multicolumn{2}{p{\textwidth}}{\textbf{#1}}\\
-        \textsc{#2} & #3 \\
+        \multicolumn{2}{p{\textwidth}}{\textbf{\color{companycolor}#1}}\\
+        \textsc{\color{positioncolor}#2} & #3 \\
         \hline
         \multicolumn{2}{p{\textwidth}}{#4}
     \end{tabularx}
@@ -31,22 +35,41 @@
     %\textsc{Address:} & 1005 7th Ave N Fargo ND 58102\\
     \textsc{Phone:} & (218) 517-0917\\
     \textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}\\
-    \textsc{Website:} & \href{gabevenberg.com}{gabevenberg.com}\\
+    \textsc{Website:} & \href{https://gabevenberg.com}{gabevenberg.com}\\
     \textsc{GitHub:} & \href{https://github.com/gabevenberg}{github.com/gabevenberg}\\
     \textsc{Personal Git server:} & \href{https://git.venberg.xyz/Gabe}{git.venberg.xyz/Gabe}\\
     \end{tabular}
+\section*{Professional Summary}
+
+\begin{itemize}
+    \item 2 years of experience as a software engineer
+    \item 1 year of experience with embedded Linux.
+    \item Bachelors of science in computer science.
+    \item Contributor to Python programming language.
+\end{itemize}
+
+\section*{Skills Summary}
+
+\begin{description}
+    \item[Programming Languages:] Rust, Python, Java, Bash, C, Nix
+    \item[Tools:] Git, Yocto linux, \LaTeX{}, Vim, Jenkins
+    \item[Linux Administration:] NGINX, Apache, Caddy, Docker, NixOS, Proxmox
+\end{description}
+
 \section*{Work Experience}
     \experience
     {John Deere}
     {Embedded Linux Engineer}
-    {August 2023--July 2024}
+    {August 2023--August 2024}
     {
         \begin{itemize}
             \item Developed Linux distributions for embedded systems with Yocto.
+            \item Diagnosed, developed workarounds, and ultimately fixed errors in linux hardware drivers.
             \item Upgraded kernel in an embedded Linux project from 4.9 to 6.1, and upgraded the same projects Yocto version from Zeus to Klondike.
             \item Ported hardware drivers to new linux kernel version.
             \item Was code owner for python api for testing hardware used in Hardware in the Loop testing.
             \item Developed tests and utilities for python based Hardware in the Loop testing.
+            \item Used jenkins CI to continuously test products for regressions.
             \item Used Git and Github to collaborate across teams.
         \end{itemize}
     }
@@ -122,11 +145,10 @@
     %         \end{itemize}
     %     }
 
-\newpage
 \section*{Education}
     \experience
-        {NDSU---Fargo, North Dakota}
-        {BS in Computer Science}
+        {North Dakota State University---Fargo, North Dakota}
+        {Bachelors of science in computer science.}
         {Graduated 2023}
         {}
 
@@ -135,23 +157,6 @@
         {General Ed Associates Degree}
         {Graduated 2020}
         {}
-\begin{minipage}{\linewidth}
-    \section*{Technology Skills}
-    \begin{tasks}[style=itemize](3)
-    \task Rust
-    \task Python
-    \task Java
-    \task Bash
-    \task C
-    \task Git version control system
-    \task Linux administration
-    \task Embedded Linux
-    \task Network administration
-    \task Computer repair
-    \task \LaTeX{} markup language
-    \task Googling
-    \end{tasks}
-\end{minipage}
 
 \section*{Other Experience}
     \experience
@@ -177,7 +182,7 @@
         {Building and soldering custom keyboards}
         {2023--present}
         {
-            Have built 2 custom split keyboards with a focus on ergonomics and portability.
+            Build custom split keyboards with a focus on ergonomics and portability.
         }
 
     \experience
@@ -189,7 +194,7 @@
             placing in the top 500 individuals and top 200 teams nationwide for three competitions.
         }
 
-\newpage
+% \newpage
 % \section*{keywords}
 %   {\small
 %   If you, a human, are reading this, you don't have to. This is just a list of keywords that the automated filters always want, but are either just alternate wordings of things already on the resume, are in places of the resume that I have found parsers have trouble with, or are trivial (like office experience). All keywords \emph{are} applicable to me.
