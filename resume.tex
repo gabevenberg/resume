@@ -1,16 +1,22 @@
 \documentclass[letterpaper,10pt]{article}
 \usepackage[margin=2cm]{geometry}
 \usepackage{tasks}
-\usepackage[svgnames]{xcolor}
+\usepackage[svgnames,table]{xcolor}
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{array}
 % adds newline after paragraph, removes indent
 \usepackage[skip=10pt plus1pt]{parskip}
+
+\arrayrulecolor{SteelBlue}
+\setlength{\arrayrulewidth}{.5mm}
 \colorlet{linkcolor}{SteelBlue}
-\colorlet{companycolor}{Black}
-\colorlet{positioncolor}{Black}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolor}
+
+% remove large spacing in lists
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
 
 % right aligned column
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
@@ -19,8 +25,8 @@
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\experience}[4]{
     \begin{tabularx}{\textwidth}{L R}
-        \multicolumn{2}{p{\textwidth}}{\textbf{\color{companycolor}#1}}\\
-        \textsc{\color{positioncolor}#2} & #3 \\
+        \multicolumn{2}{p{\textwidth}}{\textbf{#1}}\\
+        \textsc{#2} & #3 \\
         \hline
         \multicolumn{2}{p{\textwidth}}{#4}
     \end{tabularx}
@@ -43,7 +49,8 @@
     \item 2 years of experience as a software engineer
     \item 1 year of experience with embedded Linux.
     \item Bachelors of science in computer science.
-    \item Contributor to Python programming language.
+    \item Contributor to Python programming language standard library.
+    \item Experience working across 8+hr timezone differences.
 \end{itemize}
 
 \section*{Skills Summary}
@@ -62,10 +69,10 @@
     {
         \begin{itemize}
             \item Developed Linux distributions for embedded systems with Yocto.
-            \item Diagnosed, developed workarounds, and ultimately fixed errors in linux hardware drivers.
-            \item Upgraded kernel in an embedded Linux project from 4.9 to 6.1, and upgraded the same projects Yocto version from Zeus to Klondike.
-            \item Ported hardware drivers to new linux kernel version.
-            \item Was code owner of Python api used for hardware essential to Hardware in the Loop testing.
+            \item Diagnosed, developed workarounds, and ultimately fixed errors in Linux hardware drivers.
+            \item Upgraded kernel in an embedded Linux project from 4.9 to 6.1, and upgraded the same projects Yocto version from Zeus(3.0) to Kirkstone(4.0).
+            \item Ported hardware drivers to new Linux kernel version.
+            \item Code owner of Python api used for hardware essential to Hardware in the Loop testing, upgrading the API library to support 2 new hardware revisions.
             \item Developed tests and utilities for Python based Hardware in the Loop testing.
             \item Used Jenkins CI to continuously test products for regressions.
             \item Used Git and Github to collaborate across teams.
@@ -89,8 +96,9 @@
         {
             \begin{itemize}
                 \item Implemented a Rust-based log parser for the Kata Containers project,
-                    including writing unit tests, integrating the tool with existing codebase,
+                    including writing unit tests, integrating the tool into the existing codebase,
                     and implementing suggestions from code reviewers.
+                    Writing the tool in Rust allowed the tool to be integrated with the projects existing CLI tools.
                 \item Collaborated using the GitHub workflow, chat rooms,
                     and video chat remotely and across 8+hr timezone difference.
             \end{itemize}
@@ -103,7 +111,7 @@
         {
             \begin{itemize}
                 \item Wrote Python scripts to translate requirements from Word documents into a
-                    format understood by a propriatary requirements analysis tool.
+                    format understood by a proprietary requirements analysis tool.
                 \item Performed requirements analysis, wrote and performed software and hardware test procedures,
                     and analyzed test coverage to enable regulatory approval of a new medical device.
             \end{itemize}
@@ -162,7 +170,7 @@
         {Home Linux Lab}
         {2019--present}
         {
-            Run a home network consisting of 2 physical servers and 6 virtual machines doing a variety of tasks,
+            Run a home network consisting of 2 physical servers, 1 cloud server, and 6 virtual machines doing a variety of tasks,
             such as a DNS, an NGINX reverse proxy, and several web servers serving static and dynamic content.
             Currently running: Nextcloud, Forgejo, PiHole, Nixos, Mainsail, and a static website.
         }
