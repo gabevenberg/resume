@@ -34,20 +34,20 @@
 
 \begin{document}
 \pagestyle{empty}%non numbered pages
-\section*{Gabe Venberg}
+\section*{Gabriel Venberg}
     \begin{tabular}{r l r l}
-    %\textsc{Address:} & 1005 7th Ave N Fargo ND 58102\\
-    \textsc{Phone:} & (218) 517-0917 &
-    \textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}\\
-    \textsc{Website:} & \href{https://gabevenberg.com}{gabevenberg.com} &
-    \textsc{GitHub:} & \href{https://github.com/gabevenberg}{github.com/gabevenberg}\\
-    \textsc{Personal Git server:} & \href{https://git.venberg.xyz/Gabe}{git.venberg.xyz/Gabe} &
+    \textsc{Address:} & Rheingaustraße 32a 65201 Wiesbaden, DE &
+    \textsc{Phone:} & +49 157 3581 2667\\
+    \textsc{Email:} & \href{mailto:gabevenberg@gmail.com}{gabevenberg@gmail.com}&
+    \textsc{Website:} & \href{https://gabevenberg.com}{gabevenberg.com} \\
+    \textsc{GitHub:} & \href{https://github.com/gabevenberg}{github.com/gabevenberg}&
+    \textsc{Personal Git server:} & \href{https://git.venberg.xyz/Gabe}{git.venberg.xyz/Gabe}\\
     \end{tabular}
 \section*{Professional Summary}
 
 \begin{itemize}
-    \item 2 years of experience in software engineering.
-    \item 1 year of experience with embedded Linux.
+    \item 3 years of experience in software engineering.
+    \item 2 year of experience with embedded Linux.
     \item Bachelors of science in computer science.
     \item Contributor to Python programming language standard library.
     \item Experience working across 8+hr timezone differences.
@@ -56,12 +56,28 @@
 \section*{Skills Summary}
 
 \begin{description}
-    \item[Programming Languages:] Rust, Python, Java, Bash, C, Nix
+    \item[Programming Languages:] Rust, Python, Bash, C, Nix
     \item[Tools:] Git, Yocto linux, \LaTeX{}, Vim, Jenkins
-    \item[Linux Administration:] NGINX, Apache, Caddy, Docker, NixOS, Proxmox
+    \item[Linux Administration:] NGINX, Apache, Caddy, Docker, NixOS, Proxmox, SystemD
 \end{description}
 
 \section*{Work Experience}
+    \experience
+    {Assistme}
+    {Embedded Software Engineer}
+    {February 2025--Current}
+    {
+        \begin{itemize}
+            \item Developed Linux distributions for an embedded system with Yocto.
+            \item Developed a Zephyr RTOS based IOT device for tracking of patient conditions.
+            \item Implemented StrongSwan IOT vpn to allow remote access of devices in the field
+            \item Implemented a Python based HIL testing system to test both Yocto and Zephyr based systems.
+            \item Rewrote Python based embedded Linux application in Rust to improve performance, Bluetooth reliability, and shrink image size.
+            \item Optimized system reliability and logging using SystemD
+            \item Wrote documentation to enable compliance with standards including ISO 13485, ISO 14971, EN IEC 81001-5-1, IEC 62304 and IEC 60601
+            \item Used Git and Github to collaborate with the team
+        \end{itemize}
+    }
     \experience
     {John Deere}
     {Embedded Linux Engineer}
@@ -166,13 +182,21 @@
 
 \section*{Other Experience}
     \experience
+        {Open Source Personal Projects}
+        {Author of an Open Source Project.}
+        {2025--present}
+        {
+            Author of Crabroll, a open source window blind controller for Home Assistant, built in Rust and running on an ESP32c3.
+        }
+
+    \experience
         {Homelab}
         {Home Linux Lab}
         {2019--present}
         {
-            Run a home network consisting of 2 physical servers, 1 cloud server, and 6 virtual machines doing a variety of tasks,
+            Run a home network consisting of 2 physical servers, 1 cloud server, and several virtual machines doing a variety of tasks,
             such as a DNS, a NGINX reverse proxy, and several web servers serving static and dynamic content.
-            Currently running: Nextcloud, Forgejo, PiHole, Nixos, Mainsail, and a static website.
+            Currently running: Immich, Jellyfin, Home Assistant, Forgejo, Nixos, Mainsail, and a static website.
         }
 
     \experience
@@ -180,7 +204,15 @@
         {Contributor to various open source projects}
         {2022--present}
         {
-            Have contributed patches, both large and small, to open source projects including Python and Kata Containers.
+            Have contributed patches, both large and small, to open source projects including Python, Nixpkgs, and Kata Containers.
+        }
+
+    \experience
+        {3D printing hobbyist}
+        {Build and operate various 3d printers}
+        {2021--present}
+        {
+            Build, tune, and operate custom and kit 3d printers, my fleet includes a heavily modified Ender 3 running Klipper firmware (almost no original parts left) and a Voron Trident.
         }
 
     \experience
@@ -191,14 +223,14 @@
             Build custom split keyboards with a focus on ergonomics and portability.
         }
 
-    \experience
-        {National Cyber League}
-        {Four-time competitor in the National Cyber League.}
-        {2021, 2022, and 2023}
-        {
-            Competed for NDSU in the bi-annual National Cyber League in individual and team games,
-            placing in the top 500 individuals and top 200 teams nationwide for three competitions.
-        }
+    % \experience
+    %     {National Cyber League}
+    %     {Four-time competitor in the National Cyber League.}
+    %     {2021, 2022, and 2023}
+    %     {
+    %         Competed for NDSU in the bi-annual National Cyber League in individual and team games,
+    %         placing in the top 500 individuals and top 200 teams nationwide for three competitions.
+    %     }
 
 % \newpage
 % \section*{keywords}
@@ -209,6 +241,9 @@
 %           \task Java
 %           \task Python
 %           \task Rust
+%           \task Embedded Software
+%           \task C
+%           \task Nix
 %           \task Scientific data processing
 %           \task Web Scraping
 %           \task Linux BASH scripting.
